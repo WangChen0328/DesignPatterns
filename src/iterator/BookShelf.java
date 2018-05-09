@@ -14,8 +14,6 @@ public class BookShelf implements Aggregate {
      */
     private List<Book> books = new ArrayList<>();
 
-    private int last;
-
     public void appendBook(Book book) {
         books.add(book);
     }
