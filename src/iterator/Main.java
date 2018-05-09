@@ -12,6 +12,9 @@ public class Main {
         bookShelf.appendBook(new Book("C书"));
         bookShelf.appendBook(new Book("D书"));
         Iterator<Book> iterator = bookShelf.iterator();
+        /**
+         * while循环并不依赖于BookShelf的实现
+         */
         while (iterator.hasNext()) {
             Book book = iterator.next();
             System.out.println(book.getName());
