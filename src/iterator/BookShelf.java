@@ -1,5 +1,6 @@
 package iterator;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -8,7 +9,10 @@ import java.util.List;
  */
 public class BookShelf implements Aggregate {
 
-    private List<Book> books;
+    /**
+     * 不管使用数组，List,Vector 只需要变更 书架类即可
+     */
+    private List<Book> books = new ArrayList<>();
 
     private int last;
 

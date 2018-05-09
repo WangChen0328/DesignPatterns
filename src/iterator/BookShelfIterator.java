@@ -3,8 +3,9 @@ package iterator;
 /**
  * @author wangchen
  * @date 2018/5/9 10:39
+ * 遍历和实现分离
  */
-public class BookShelfIterator implements Iterator {
+public class BookShelfIterator implements Iterator<Book> {
 
     private BookShelf bookShelf;
 
@@ -25,7 +26,7 @@ public class BookShelfIterator implements Iterator {
     }
 
     @Override
-    public Object next() {
+    public Book next() {
         Book book = bookShelf.getBookAt(index);
         ++ index;
         return book;
