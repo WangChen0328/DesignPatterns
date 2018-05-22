@@ -1,5 +1,7 @@
 package composite;
 
+import visitor.Visitor;
+
 /**
  * @author wangchen
  * @date 2018/5/21 14:30
@@ -29,5 +31,9 @@ public class File extends Entry {
     protected void printList(String prefix) {
         System.out.println(prefix + "/" + this);
     }
-    
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+    }
 }

@@ -1,5 +1,7 @@
 package composite;
 
+import visitor.Visitor;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -39,6 +41,10 @@ public class Directory extends Entry {
         return entry;
     }
 
+    public Iterator iterator() {
+        return entries.iterator();
+    }
+
     @Override
     protected void printList(String prefix) {
         System.out.println(prefix + "/" + this);
@@ -47,5 +53,10 @@ public class Directory extends Entry {
             Entry next = iterator.next();
             next.printList(prefix + "/" + this.name);
         }
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
     }
 }

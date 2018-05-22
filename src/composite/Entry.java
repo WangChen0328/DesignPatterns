@@ -1,10 +1,13 @@
 package composite;
 
+import visitor.Element;
+import visitor.Visitor;
+
 /**
  * @author wangchen
  * @date 2018/5/21 14:19
  */
-public abstract class Entry {
+public abstract class Entry implements Element {
 
     public abstract String getName();
 
