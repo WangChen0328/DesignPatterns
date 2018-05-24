@@ -21,7 +21,7 @@ public class Memento {
         fruits.add(fruit);
     }
 
-    int getMoney() {
+    public int getMoney() {
         return money;
     }
 
